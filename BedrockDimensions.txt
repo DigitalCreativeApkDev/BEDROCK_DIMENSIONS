@@ -50,6 +50,7 @@ Shinies
             $amount=random(bedrocks:ps*60*1,bedrocks:ps*60*5)*$boost
             toast The lucky bedrock grants you<//><b>[$amount] bedrocks</b>.
             yield $amount bedrocks
+        end
         icon:https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/lucky_bedrock.png
 
 Buildings
