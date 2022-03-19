@@ -44,7 +44,6 @@ Shinies
         frequency variation:30
         movement:onRight moveLeft fade bounce:0.05
         class:bigButton
-        icon:https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/lucky_bedrock.png
         on click:
             $boost=random(1, 10)
             // get between 1 to 5 minutes of the production of bedrocks
@@ -52,6 +51,7 @@ Shinies
             toast The lucky bedrock grants you<//><b>[$amount] bedrocks</b>.
             yield $amount bedrocks
         end
+        icon:https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/lucky_bedrock.png
 
 Buildings
 	*TEMPLATE
