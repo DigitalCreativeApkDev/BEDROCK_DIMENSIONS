@@ -23,8 +23,8 @@ Buttons
         desc:Click this button to earn bedrocks!
         on click:anim icon wobble
         on click:yield 1 bedrock
-        icon:https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/bedrock.png
         no text
+        icon:https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/bedrock.png
         class:bigButton hasFlares
         icon class:shadowed
         tooltip origin:bottom
