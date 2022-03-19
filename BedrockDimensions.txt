@@ -271,7 +271,7 @@ Achievements
     *bedrockPsAchiev5
 		name:Bedrocks Per Second Achievement 5
 		desc:Produce <b>100000000000</b> bedrocks per second.
-		req:100000000000 bedrocks per seconds
+		req:100000000000 bedrocks per second
         
     *clickAchiev1
         name:Click Achievement 1
