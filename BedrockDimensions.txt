@@ -198,7 +198,7 @@ Upgrades
         name:Bedrock Upgrade 3
         desc:10 times more bedrocks produced.<//><b>Effect:</b><.>bedrocks/click x10<.>bedrock production *10
         cost:1000000000000 bedrocks
-        passive:multiply bedrock yield of bedrockkButton by 10
+        passive:multiply bedrock yield of bedrockButton by 10
         passive:multiply yield of bedrocks by 10
         req:1000000000000 bedrocks:earned
         
