@@ -45,11 +45,17 @@ Shinies
         movement:onRight moveLeft fade bounce:0.05
         class:bigButton
         on click:
-            $boost=random(1, 10)
-            // get between 1 to 5 minutes of the production of bedrocks
-            $amount=random(bedrocks:ps*60*1,bedrocks:ps*60*5)*$boost
-            toast The lucky bedrock grants you<//><b>[$amount] bedrocks</b>.
-            yield $amount bedrocks
+            if (chance(15%))
+                $d1amount=random(1,5)
+                toast The lucky block grants you<//><b>[$d1amount] dimension1</b>.
+                yield $d1amount dimension1
+            else
+                $boost=random(1, 10)
+                // get between 1 to 5 minutes of the production of bedrocks
+                $amount=random(bedrocks:ps*60*1,bedrocks:ps*60*5)*$boost
+                toast The lucky bedrock grants you<//><b>[$amount] bedrocks</b>.
+                yield $amount bedrocks
+            end
         end
         icon:https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/lucky_bedrock.png
 
