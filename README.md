@@ -5,4 +5,4 @@ This repository contains all the files required for the game "Bedrock Dimensions
 # Game Link
 
 To play the game, go to the link 
-https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/BedrockDimensions.txt
+https://orteil.dashnet.org/igm/?g=https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/BedrockDimensions.txt
