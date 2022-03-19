@@ -19,3 +19,274 @@ Layout
     
 Buttons
     *bedrockButton
+        name:Bedrock Button
+        desc:Click this button to earn bedrocks!
+        on click:anim icon wobble
+        on click:yield 1 bedrock
+        icon:https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/bedrock.png
+        no text
+        class:bigButton hasFlares
+        icon class:shadowed
+        tooltip origin:bottom
+        tooltip class:red
+        
+Resources
+    *bedrock|bedrocks
+        name:Bedrock|Bedrocks
+        desc:Bedrock(s).
+        class:noBackground
+		show earned
+        
+Shinies
+    *luckyBedrock
+        on click:log Woop
+        frequency:60
+        frequency variation:30
+        movement:onRight moveLeft fade bounce:0.05
+        class:bigButton
+        on click:
+            $boost=random(1, 10)
+            // get between 1 to 5 minutes of the production of bedrocks
+            $amount=random(bedrocks:ps*60*1,bedrocks:ps*60*5)*$boost
+            toast The lucky bedrock grants you<//><b>[$amount] bedrocks</b>.
+            yield $amount bedrocks
+        icon:https://raw.githubusercontent.com/DigitalCreativeApkDev/BEDROCK_DIMENSIONS/main/lucky_bedrock.png
+
+Buildings
+	*TEMPLATE
+		on click:anim glow
+        
+    *dimension1
+        name:1st Dimension
+        desc:1st Dimension.<//><b>Effect:</b><.>Produces 1*pow(1.15, dimension1) bedrocks every second.
+        cost:100 bedrocks
+        on tick:yield 1*pow(1.15, dimension1) bedrocks
+        unlocked
+        
+    *dimension2
+        name:2nd Dimension
+        desc:2nd Dimension.<//><b>Effect:</b><.>Produces 100*pow(1.15, dimension2) bedrocks and 0.001 dimension1 every second.
+        cost:10000 bedrocks
+        on tick:yield 100*pow(1.15, dimension2) bedrocks
+        on tick:yield 0.001 dimension1
+        req:10000 bedrocks:earned
+        
+    *dimension3
+        name:3rd Dimension
+        desc:3rd Dimension.<//><b>Effect:</b><.>Produces 100000*pow(1.15, dimension3) bedrocks and 0.001 dimension2 every second.
+        cost:100000000 bedrocks
+        on tick:yield 100000*pow(1.15, dimension3) bedrocks
+        on tick:yield 0.001 dimension2
+        req:100000000 bedrocks:earned
+        
+    *dimension4
+        name:4th Dimension
+        desc:4th Dimension.<//><b>Effect:</b><.>Produces 100000000*pow(1.15, dimension4) bedrocks and 0.001 dimension3 every second.
+        cost:10000000000000 bedrocks
+        on tick:yield 100000000*pow(1.15, dimension4) bedrocks
+        on tick:yield 0.001 dimension3
+        req:10000000000000 bedrocks:earned
+        
+    *dimension5
+        name:5th Dimension
+        desc:5th Dimension.<//><b>Effect:</b><.>Produces 100000000000*pow(1.15, dimension5) bedrocks and 0.001 dimension4 every second.
+        cost:1000000000000000000 bedrocks
+        on tick:yield 100000000000*pow(1.15, dimension5) bedrocks
+        on tick:yield 0.001 dimension4
+        req:1000000000000000000 bedrocks:earned
+        
+    *dimension6
+        name:6th Dimension
+        desc:6th Dimension.<//><b>Effect:</b><.>Produces 100000000000000*pow(1.15, dimension6) bedrocks and 0.001 dimension5 every second.
+        cost:100000000000000000000000 bedrocks
+        on tick:yield 100000000000000*pow(1.15, dimension6) bedrocks
+        on tick:yield 0.001 dimension5
+        req:100000000000000000000000 bedrocks:earned
+        
+    *dimension7
+        name:7th Dimension
+        desc:7th Dimension.<//><b>Effect:</b><.>Produces 100000000000000000*pow(1.15, dimension7) bedrocks and 0.001 dimension6 every second.
+        cost:10000000000000000000000000000 bedrocks
+        on tick:yield 100000000000000000*pow(1.15, dimension7) bedrocks
+        on tick:yield 0.001 dimension6
+        req:10000000000000000000000000000 bedrocks:earned
+        
+    *dimension8
+        name:8th Dimension
+        desc:8th Dimension.<//><b>Effect:</b><.>Produces 100000000000000000000*pow(1.15, dimension8) bedrocks and 0.001 dimension7 every second.
+        cost:1000000000000000000000000000000000 bedrocks
+        on tick:yield 100000000000000000000*pow(1.15, dimension8) bedrocks
+        on tick:yield 0.001 dimension7
+        req:1000000000000000000000000000000000 bedrocks:earned
+        
+    *dimension9
+        name:9th Dimension
+        desc:9th Dimension.<//><b>Effect:</b><.>Produces 100000000000000000000000*pow(1.15, dimension9) bedrocks and 0.001 dimension8 every second.
+        cost:100000000000000000000000000000000000000 bedrocks
+        on tick:yield 100000000000000000000000*pow(1.15, dimension9) bedrocks
+        on tick:yield 0.001 dimension8
+        req:100000000000000000000000000000000000000 bedrocks:earned
+        
+    *aDimension1
+        name:1st Advanced Dimension
+        desc:1st Advanced Dimension.<//><b>Effect:</b><.>Produces 10000000000000000000000000000*pow(1.15, aDimension1) bedrocks and 0.001 dimension9 every second.
+        cost:1000000000000000000000000000000000000000000000000 bedrocks
+        on tick:yield 10000000000000000000000000000*pow(1.15, aDimension1) bedrocks
+        on tick:yield 0.001 dimension9
+        req:1000000000000000000000000000000000000000000000000 bedrocks:earned
+        
+    *aDimension2
+        name:2nd Advanced Dimension
+        desc:2nd Advanced Dimension.<//><b>Effect:</b><.>Produces 1000000000000000000000000000000000*pow(1.15, aDimension2) bedrocks and 0.001 aDimension1 every second.
+        cost:10000000000000000000000000000000000000000000000000000000000 bedrocks
+        on tick:yield 1000000000000000000000000000000000*pow(1.15, aDimension2) bedrocks
+        on tick:yield 0.001 aDimension1
+        req:10000000000000000000000000000000000000000000000000000000000 bedrocks:earned
+        
+    *aDimension3
+        name:3rd Advanced Dimension
+        desc:3rd Advanced Dimension.<//><b>Effect:</b><.>Produces 100000000000000000000000000000000000000*pow(1.15, aDimension3) bedrocks and 0.001 aDimension2 every second.
+        cost:100000000000000000000000000000000000000000000000000000000000000000000 bedrocks
+        on tick:yield 100000000000000000000000000000000000000*pow(1.15, aDimension3) bedrocks
+        on tick:yield 0.001 aDimension2
+        req:100000000000000000000000000000000000000000000000000000000000000000000 bedrocks:earned
+        
+    *aDimension4
+        name:4th Advanced Dimension
+        desc:4th Advanced Dimension.<//><b>Effect:</b><.>Produces 10000000000000000000000000000000000000000000*pow(1.15, aDimension4) bedrocks and 0.001 aDimension3 every second.
+        cost:1000000000000000000000000000000000000000000000000000000000000000000000000000000 bedrocks
+        on tick:yield 10000000000000000000000000000000000000000000*pow(1.15, aDimension4) bedrocks
+        on tick:yield 0.001 aDimension3
+        req:1000000000000000000000000000000000000000000000000000000000000000000000000000000 bedrocks:earned
+        
+    *aDimension5
+        name:5th Advanced Dimension
+        desc:5th Advanced Dimension.<//><b>Effect:</b><.>Produces 1000000000000000000000000000000000000000000000000*pow(1.15, aDimension5) bedrocks and 0.001 aDimension4 every second.
+        cost:10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 bedrocks
+        on tick:yield 1000000000000000000000000000000000000000000000000*pow(1.15, aDimension5) bedrocks
+        on tick:yield 0.001 aDimension4
+        req:10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 bedrocks:earned
+        
+Upgrades
+	*TEMPLATE
+		on click:anim glow
+        
+    *bedrockUpgrade1
+        name:Bedrock Upgrade 1
+        desc:Twice more bedrocks produced.<//><b>Effect:</b><.>bedrocks/click x2<.>bedrock production *2
+        cost:10000 bedrocks
+        passive:multiply bedrock yield of bedrockButton by 2
+        passive:multiply yield of bedrocks by 2
+        req:10000 bedrocks:earned
+        
+    *bedrockUpgrade2
+        name:Bedrock Upgrade 2
+        desc:5 times more bedrocks produced.<//><b>Effect:</b><.>bedrocks/click x5<.>bedrock production *5
+        cost:10000000 bedrocks
+        passive:multiply bedrock yield of bedrockButton by 5
+        passive:multiply yield of bedrocks by 5
+        req:10000000 bedrocks:earned
+        
+    *bedrockUpgrade3
+        name:Bedrock Upgrade 3
+        desc:10 times more bedrocks produced.<//><b>Effect:</b><.>bedrocks/click x10<.>bedrock production *10
+        cost:1000000000000 bedrocks
+        passive:multiply bedrock yield of bedrockkButton by 10
+        passive:multiply yield of bedrocks by 10
+        req:1000000000000 bedrocks:earned
+        
+    *bedrockUpgrade4
+        name:Bedrock Upgrade 4
+        desc:20 times more bedrocks produced.<//><b>Effect:</b><.>bedrocks/click x20<.>bedrock production *20
+        cost:10000000000000000000 bedrocks
+        passive:multiply bedrock yield of bedrockButton by 20
+        passive:multiply yield of bedrocks by 20
+        req:10000000000000000000 bedrocks:earned
+        
+    *bedrockUpgrade5
+        name:Bedrock Upgrade 5
+        desc:50 times more bedrocks produced.<//><b>Effect:</b><.>bedrocks/click x50<.>bedrock production *50
+        cost:10000000000000000000000000000 bedrocks
+        passive:multiply bedrock yield of bedrockButton by 50
+        passive:multiply yield of bedrocks by 50
+        req:10000000000000000000000000000 bedrocks:earned
+     
+     
+Achievements
+	*TEMPLATE
+		on click:anim glow
+        
+    *bedrockAchiev1
+        name:First bedrock!
+        desc:Have <b>1</b> bedrock.
+        req:1 bedrock
+        
+    *bedrockAchiev2
+        name:Bedrock Achievement 2
+        desc:Have <b>1000</b> bedrocks.
+        req:1000 bedrocks
+        
+    *bedrockAchiev3
+        name:Bedrock Achievement 3
+        desc:Have <b>1000000</b> bedrocks.
+        req:1000000 bedrocks
+        
+    *bedrockAchiev4
+        name:Bedrock Achievement 4
+        desc:Have <b>1000000000</b> bedrocks.
+        req:1000000000 bedrocks
+        
+    *bedrockAchiev5
+        name:Bedrock Achievement 5
+        desc:Have <b>1000000000000</b> bedrocks.
+        req:1000000000000 bedrocks
+        
+    *bedrockPsAchiev1
+		name:Bedrocks Per Second Achievement 1
+		desc:Produce <b>10</b> bedrocks per second.
+		req:10 bedrocks per second
+        
+    *bedrockPsAchiev2
+		name:Bedrocks Per Second Achievement 2
+		desc:Produce <b>100</b> bedrocks per second.
+		req:100 bedrocks per second
+        
+    *bedrockPsAchiev3
+		name:Bedrocks Per Second Achievement 3
+		desc:Produce <b>10000</b> bedrocks per second.
+		req:10000 bedrocks per second
+        
+    *bedrockPsAchiev4
+		name:Bedrocks Per Second Achievement 4
+		desc:Produce <b>10000000</b> bedrocks per second.
+		req:10000000 bedrocks per second
+        
+    *bedrockPsAchiev5
+		name:Bedrocks Per Second Achievement 5
+		desc:Produce <b>100000000000</b> bedrocks per second.
+		req:100000000000 bedrocks per seconds
+        
+    *clickAchiev1
+        name:Click Achievement 1
+        desc:Click the bedrock <b>10</b> times.
+        req:10 bedrockButton clicks
+        
+    *clickAchiev2
+        name:Click Achievement 2
+        desc:Click the bedrock <b>100</b> times.
+        req:100 bedrockButton clicks
+        
+    *clickAchiev3
+        name:Click Achievement 3
+        desc:Click the bedrock <b>1000</b> times.
+        req:1000 bedrockButton clicks
+        
+    *clickAchiev4
+        name:Click Achievement 4
+        desc:Click the bedrock <b>10000</b> times.
+        req:10000 bedrockButton clicks
+        
+    *clickAchiev5
+        name:Click Achievement 5
+        desc:Click the bedrock <b>100000</b> times.
+        req:100000 bedrockButton clicks
